@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for s in st %}
+        <h4>{{ s }}</h4><br>
+    {% endfor %}
+    <br>
+
+    <button onclick="goBack()">Continue Shopping</button>
+    <script>
+        function goBack()
+        {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

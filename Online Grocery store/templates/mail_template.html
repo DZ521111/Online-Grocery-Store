@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRP Grocerry</title>
+</head>
+<body>
+
+
+        {% if c %}
+    <h1>{{ c }} </h1><br>
+    {% endif %}
+    {% if bill %}
+        <h1>Your Order is sucessfully Placed</h1><br>
+        <h2>Your Total Bill =</h2><h1>{{ bill.total_bill }}</h1>
+    {% endif %}
+
+
+</body>
+</html>
+

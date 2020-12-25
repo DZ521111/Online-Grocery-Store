@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product</title>
+
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css1/material-design-iconic-font.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css1/style.css' %}">
+    <meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+
+            <div class="container">
+                <div class="signup-content">
+
+                    <form method="POST" id="signup-form" class="signup-form"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <h2 class="form-title">Add Category</h2>
+
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="category_name" maxlength="200" required id="id_category_name" placeholder="category_name">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="file" name="image" accept="image/*" required id="id_image" class="form-input">
+                        </div>
+
+
+                       <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Add Category
+							</button>
+						</div>
+					</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

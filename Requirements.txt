@@ -1,0 +1,27 @@
+
+Project Title := Online Grocery Store
+
+System Requirements:-
+
+1. Django-version-3.0.3
+2. python 3.8.0
+3. Other Packages :pillow
+4.List Of Requirements Implemented:
+	login user
+	register User
+	Add Product's Category(Admin User only)
+	Add Product(Admin User only)
+	Add Product in Cart
+	Update Product Quantity
+	Search Product
+	send mail When user subscribe
+	send mail when user Checkout
+
+===========================================================================
+ 	
+				STEPS
+
+===========================================================================
+1.first of all create database with name 'sp' in mysql.
+2.create user with name 'admin' and add product category and then add product of that category.
+3.then check Implemented functionality.

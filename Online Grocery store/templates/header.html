@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+</head>
+<body>
+
+<header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/home"><img src="{% static 'img/core-img/logomain.png' %}" alt=""></a>
+            </div>
+            <!-- Amado Nav -->
+
+
+
+            <nav class="amado-nav">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    {% if user.is_authenticated %}
+                        {% if  user.get_username  == 'admin' %}
+                            <li><a href="/add_category">Add Product Category</a></li>
+                            <li><a href="/add_product">Add Product</a></li>
+                        {% endif %}
+                    {% else %}
+                        <p>Welcome, new user. Please log in.</p>
+                    {% endif %}
+
+                    <li><a href="/show_cart">cart</a></li>
+                    <li><a href="/checkout">Check out</a></li>
+
+                    <li><a href="feedback">Feed-back</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+            <!-- Button Group -->
+
+            <!-- Cart Menu -->
+            <div class="cart-fav-search mb-100">
+
+                <a href="#" class="search-nav"><img src="{% static 'img/core-img/search.png' %}" alt=""> Search</a>
+            </div>
+            <!-- Social Button -->
+
+        </header>
+
+</body>
+</html>

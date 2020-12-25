@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product</title>
+
+    <!-- Font Icon -->
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css1/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css1/style.css' %}">
+    <meta charset="UTF-8">
+
+
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+
+            <div class="container">
+                <div class="signup-content">
+
+                    <form method="POST" id="signup-form" class="signup-form"   enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <h2 class="form-title">Add Product</h2>
+                        Product_Name :
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="product_name" placeholder="Product_Name" required id="id_product_name" maxlength="30"/>
+                        </div>
+                        Product_Category:
+                        <div class="form-group">
+                        <select name="category_name" id="id_category_name"  style="width: 200px;">
+                            {% if category %}
+                                {% for c in category %}
+
+                                        <option >{{ c.category_name }}</option>
+
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                        <br><br>
+                        Product iamge:
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-input" name="product_img1" accept="image/*" required id="id_product_img1"/>
+                        </div>
+                    <br>
+                        Product iamge:
+                        <div class="form-group">
+                            <input type="file" class="form-input" name="product_img2" accept="image/*" required id="id_product_img2"/>
+                        </div>
+                        Product_description:
+                        <div class="form-group">
+                            <textarea name="product_description" rows="4" cols="20" class="form-input" required placeholder="Product Description" maxlength="5000" id="id_product_description">
+                            </textarea>
+                        </div>
+                        Product_Price
+                        <div class="form-group">
+                            <input type="number" class="form-input" name="product_price" placeholder="Price" required id="id_product_price"/>
+                        </div>
+                        product_expiry_date:
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="product_expirydate" required id="id_product_expirydate" placeholder="0000-00-00"/>
+                        </div>
+                        Product_Manufacturing_Date:
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="product_manufecturingdate" required placeholder="0000-00-00" id="id_product_manufecturingdate"/>
+                        </div>
+
+                        Quantity
+                        <div class="form-group">
+                            <input type="number" class="form-input" required name="quantity" id="id_quantity" value="10"/>
+                        </div>
+
+                       <div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Add Product
+							</button>
+						</div>
+					</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
