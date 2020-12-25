@@ -11,6 +11,8 @@ from django.utils.html import strip_tags
 from django.views.decorators.cache import cache_control
 from .models import Product_details, product_category, add_to_cart, bill
 from .forms import *
+import numpy as np
+import pandas as pd
 
 dic = {}
 
